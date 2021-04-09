@@ -46,25 +46,25 @@ ul {
 
 /* nav */
 
-.site-nav a {
+.site-nav .link {
   color: var(--title-text-color);
 }
 
-.header-contacts a {
+.header-contacts .link {
   color: var(--primary-text-color);
 }
-.site-nav a,
-.header-contacts a {
+.site-nav .link,
+.header-contacts .link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
 .site-nav .current,
-.site-nav a:hover,
-.site-nav a:focus,
-.header-contacts a:hover,
-.header-contacts a:focus,
+.site-nav :hover,
+.site-nav :focus,
+.header-contacts :hover,
+.header-contacts :focus,
 .address:hover,
 .address:focus,
 .footer-contacts:hover,

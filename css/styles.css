@@ -6,6 +6,14 @@
 цвет фона футера и баннера #2F303A
 цвет фона команды и кнопок-фильтров #F5F4FA*/
 
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 :root {
   --primary-text-color: #757575;
   --title-text-color: #212121;
@@ -21,9 +29,30 @@ body {
   background-color: var(--first-bg-color);
   font-family: var(--main-font);
   letter-spacing: 0.03em;
+  margin: 0;
 }
 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 2px solid tomato;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* header */
@@ -31,10 +60,15 @@ ul {
 /* logo */
 
 .logo {
+  display: inline-block;
   color: #000000;
+  margin-top: 24px;
+  margin-bottom: 25px;
 }
 .logo-footer {
+  display: inline-block;
   color: white;
+  margin-top: 60px;
 }
 .logo,
 .logo-footer {
@@ -55,10 +89,13 @@ ul {
 }
 .site-nav .link,
 .header-contacts .link {
+  display: inline-block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 .site-nav .current,
 .site-nav :hover,
@@ -98,6 +135,8 @@ ul {
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
+
+  padding-top: 94px;
 }
 
 /* banner */
@@ -105,14 +144,21 @@ ul {
 .banner {
   background-color: #2f303a;
   color: white;
+  width: 1600px;
+  outline: 2px solid tomato;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 .banner-title {
+  display: inline-block;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   text-align: center;
+  margin: 200px 452px 30px;
 }
 
 /* features */
@@ -124,10 +170,12 @@ ul {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  padding-top: 94px;
 }
 .features-description {
   font-size: 14px;
   line-height: 1.71;
+  margin-top: 10px;
 }
 
 /* team */
@@ -139,11 +187,15 @@ ul {
 .team-title {
   color: var(--title-text-color);
   font-weight: 500;
+  margin-top: 30px;
 }
 .team-title,
 .team-description {
   font-size: 16px;
   line-height: 1.18;
+}
+.team-description {
+  margin-top: 10px;
 }
 
 /* buttons */
@@ -157,6 +209,13 @@ ul {
   line-height: 1.87;
   letter-spacing: 0.06em;
   cursor: pointer;
+
+  margin-bottom: 200px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  padding: 10px 32px;
 }
 .order-service:hover,
 .order-service:focus {
@@ -209,4 +268,16 @@ ul {
   font-size: 14px;
   line-height: 1.71;
   font-style: normal;
+}
+.link.address {
+  display: inline-block;
+  margin-top: 20px;
+}
+.link.footer-contacts.mail {
+  display: inline-block;
+  margin-top: 9px;
+}
+.link.footer-contacts.tel {
+  display: inline-block;
+  margin-top: 6px;
 }
